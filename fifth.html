@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fifth</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="aaa.png">
+        <style>
+            .emp{
+                display: flex;
+                justify-content: center;
+            }
+            .inner{
+                margin: 10px 40px 10px 10px;
+            }
+            .outer{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inner">
+            <div class="emp">
+                <h3>Employee Registration</h3>
+            </div>
+            <div class="emp">
+                <form action="">
+                    <label for="email">Email : </label><input type="email" name="email" id="email"><br><br>
+                    <label for="name"> Employee Name : </label><input id="name" type="text" name="empname" placeholder="Lastname Firstname Middlename" size="30"><br><br>
+                    <label for="desg"> Employee Designation : </label>
+                    <select name="desg" id="desg">
+                        <optgroup label="Technical">
+                            <option value="sd">Software Developer</option>
+                            <option value="qae">Quality Assurance Engineer</option>
+                            <option value="tl">Team Leader</option>
+                        </optgroup>
+                        <optgroup label="Sales & Management">
+                            <option value="salerepresentative">Sales Representative</option>
+                            <option value="md">Management Director</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
+                    <label for="salary"> Employee Salary : </label><input id="salary" type="number" name="salary" placeholder="Salary"><br><br>
+                    Gender :
+                    <input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label><br><br>
+                    Hobbies :
+                    <input type="checkbox" id="hobbies1" name="hobbies" value="Singing"><label for="hobbies1">Singing</label>
+                    <input type="checkbox" id="hobbies" name="hobbies" value="Dancing"><label for="hobbies">Dancing</label>
+                    <br><br>
+                    <label for="pass">Password: </label><input type="password" id="pass"><br><br>
+                    <div style="display: flex;justify-content: center;">
+                    <input type="submit" name="submit">
+                    <input type="reset" name="reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

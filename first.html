@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>First</title>
+    <link rel="icon" href="aaa.png">
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        .simpletable,
+        .simpletable th,
+        .simpletable td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .second th,
+        .second td {
+            border: 1px solid rgb(255, 255, 255);
+            background: red;
+            padding: 10px;
+        }
+
+        .third th,
+        .third td {
+            border: 3px solid rgb(196, 255, 192);
+            padding: 10px;
+        }
+        .fourth,.fifth{
+            margin-top: 50px;
+        }
+        .fourth, .fourth th, .fourth td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+
+        }
+        .fifth{
+            padding:20px;
+            text-align: center;
+        }
+        .fifth th, .fifth td{
+            border-bottom: 1px solid blue;
+
+        }
+        .fifth tr:hover{
+            background-color: rgb(208, 208, 247);
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .heading {
+            text-align: center;
+        }
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Simple Table-->
+    <h1 class="heading">Tables</h1>
+    <div class="container">
+        <!--Simple table which collapse th,td borders with some padding text align to center-->
+        <table class="simpletable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Ganesh Mali</td>
+                    <td>9.82</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Bhushan Patil</td>
+                    <td>8.03</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Sanat Pillai</td>
+                    <td>9.31</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Monu Kanojiya</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>darshan Bhasme</td>
+                    <td>8.85</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--use the only borders of th,td and background color-->
+        <table class="second">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Ganesh Mali</td>
+                    <td>9.82</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Bhushan Patil</td>
+                    <td>8.03</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Sanat Pillai</td>
+                    <td>9.31</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Monu Kanojiya</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>darshan Bhasme</td>
+                    <td>8.85</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Row Span And Col Span-->
+        <table class="third">
+            <thead>
+                <tr>
+                    <th rowspan="2">Roll No</th>
+                    <th colspan="2">Name</th>
+                    <th rowspan="2">CGPA</th>
+                </tr>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Ganesh</td>
+                    <td>Mali</td>
+                    <td>9.82</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Bhushan</td>
+                    <td>Patil</td>
+                    <td>8.03</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Sanat</td>
+                    <td>Pillai</td>
+                    <td>9.31</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Monu</td>
+                    <td>Kanojiya</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>darshan</td>
+                    <td>Bhasme</td>
+                    <td>8.85</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <!--use the width and height properties for table-->
+        <table class="fourth">
+            <thead>
+                <tr>
+                    <th style="width:20%">Roll No</th>
+                    <th>Name</th>
+                    <th style="width:20%">CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 80px;">
+                    <td>01</td>
+                    <td>Ganesh Mali</td>
+                    <td>9.82</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Bhushan Patil</td>
+                    <td>8.03</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Sanat Pillai</td>
+                    <td>9.31</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Monu Kanojiya</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>darshan Bhasme</td>
+                    <td>8.85</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--make hover effect on the table-->
+        <table class="fifth">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Ganesh Mali</td>
+                    <td>9.82</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Bhushan Patil</td>
+                    <td>8.03</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Sanat Pillai</td>
+                    <td>9.31</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Monu Kanojiya</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>darshan Bhasme</td>
+                    <td>8.85</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
