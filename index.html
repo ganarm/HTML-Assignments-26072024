@@ -33,7 +33,7 @@
             color: white;
             overflow-y: auto;
             max-height: 90vh;
-            animation: fadeInUp 1s ease forwards;
+            animation: fadeInUp 1.5s ease forwards; /* Increased duration */
             box-sizing: border-box; /* Include padding in width calculation */
         }
 
@@ -52,7 +52,7 @@
             margin: 0 0 10px;
             text-align: center;
             opacity: 0;
-            animation: fadeIn 0.5s forwards;
+            animation: fadeIn 1.5s forwards; /* Increased duration */
         }
 
         .invitation-container h1.normal {
@@ -78,7 +78,7 @@
             justify-content: center;
             margin: 20px 0;
             opacity: 0;
-            animation: fadeIn 1s forwards;
+            animation: fadeIn 1.5s forwards; /* Increased duration */
         }
 
         .image img {
@@ -140,7 +140,7 @@
 
     <!-- Background music -->
     <audio id="background-music" loop>
-        <source src="C:/Users/Dell/Music/Songs/osathi.mp3" type="audio/mp3">
+        <source src="osathi.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
@@ -153,10 +153,18 @@
             });
         });
 
-        // Animate each element one by one
+        // Animate each element one by one with scrolling
         const elements = document.querySelectorAll('.invitation-container h1, .invitation-container h2, .invitation-container p');
+        let animationDelay = 0; // Start delay at 0 seconds
+
         elements.forEach((element, index) => {
-            element.style.animationDelay = `${index * 0.5}s`; // Staggered animation
+            element.style.animationDelay = `${animationDelay}s`; // Staggered animation
+            animationDelay += 1; // Increased delay for slower animation
+
+            // Scroll the newly animated element into view
+            setTimeout(() => {
+                element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, animationDelay * 1000); // Convert to milliseconds
         });
     </script>
 </body>
