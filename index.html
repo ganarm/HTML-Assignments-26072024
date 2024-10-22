@@ -24,7 +24,8 @@
         }
 
         .invitation-container {
-            max-width: 600px;
+            width: 100%; /* Use full width */
+            max-width: 600px; /* Still cap it for larger screens */
             padding: 20px;
             background-color: #8E2157;
             border: 4px solid white;
@@ -33,6 +34,7 @@
             overflow-y: auto;
             max-height: 90vh;
             animation: fadeInUp 1s ease forwards;
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         @keyframes fadeInUp {
@@ -84,7 +86,6 @@
             max-width: 400px;
             border-radius: 10px;
             object-fit: cover;
-            /* border: 4px solid white; */
         }
 
         .line {
@@ -138,21 +139,24 @@
     </div>
 
     <!-- Background music -->
-    <audio id="background-music" loop autoplay>
-        <source src="pp.mp3" type="audio/mp3">
+    <audio id="background-music" loop>
+        <source src="C:/Users/Dell/Music/Songs/osathi.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        // Play background music
-        document.getElementById('background-music').play();
+        // Wait for user interaction to play background music
+        document.addEventListener('click', () => {
+            const music = document.getElementById('background-music');
+            music.play().catch(error => {
+                console.log('Error playing audio:', error);
+            });
+        });
 
         // Animate each element one by one
         const elements = document.querySelectorAll('.invitation-container h1, .invitation-container h2, .invitation-container p');
         elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.style.opacity = 1;
-            }, index * 300); // Adjust timing here
+            element.style.animationDelay = `${index * 0.5}s`; // Staggered animation
         });
     </script>
 </body>
